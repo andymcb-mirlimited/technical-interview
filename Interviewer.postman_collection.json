@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "84614167-d529-49e4-984c-2fc7cb7630d1",
+		"name": "Interviewer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/login",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/transactions",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/balance",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\": \"2016-12-15T10:44:33Z\",\n\t\"description\": \"Some item\",\n\t\"amount\": \"1.45\",\n\t\"currency\": \"GBP\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/spend",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"spend"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
